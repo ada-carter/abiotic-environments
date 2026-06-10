@@ -109,11 +109,10 @@
       <div class="timeline-overlay-content">
         <div class="timeline-meta" style="color: #60a5fa;">
           <span class="slide-number" style="color: #60a5fa; border-bottom: 1px solid #60a5fa;">reference // deep sea</span>
-          <span class="slide-date" style="color: #60a5fa;">archival data</span>
         </div>
         <h2 class="slide-title" style="color: #ffffff; text-shadow: 0 4px 20px rgba(0, 0, 0, 1), 0 2px 5px rgba(0, 0, 0, 1), 0 0 10px #60a5fa;">Inspirations from the Deep</h2>
         <p class="slide-desc" style="border-left: 2px solid #60a5fa;">
-          Photographic samples of hydro-thermal vents, specialized tubeworms, microbial mushroom formations, and deep-water protists. Mapped as reference inputs for the abiotic synthesis engine.
+          Hydrothermal vents, tubeworms, bacterial mats, bright blue ciliates. I have seen and interacted with these environments. They are deeply inspiring for this piece.
         </p>
       </div>
     </div>
@@ -195,17 +194,22 @@
       <div class="timeline-overlay-content">
         <div class="timeline-meta" style="color: #60a5fa;">
           <span class="slide-number" style="color: #60a5fa; border-bottom: 1px solid #60a5fa;">acoustics // processing</span>
-          <span class="slide-date" style="color: #60a5fa;">hardware logs</span>
         </div>
         <h2 class="slide-title" style="color: #ffffff; text-shadow: 0 4px 20px rgba(0, 0, 0, 1), 0 2px 5px rgba(0, 0, 0, 1), 0 0 10px #60a5fa;">Ultrasonic Transmission</h2>
         <p class="slide-desc" style="border-left: 2px solid #60a5fa;">
-          The generative soundscape was synthesized using Julia. The code models a chaotic logistic map attractor (<code style="font-family: monospace; color: #60a5fa;">bifurcation.jl</code>), triggers a multitone synthesizer (<code style="font-family: monospace; color: #60a5fa;">flayer.jl</code>), computes spectral dissonance (<code style="font-family: monospace; color: #60a5fa;">dissonance.jl</code>), and modulates the audio baseband onto a 40 kHz ultrasonic carrier (<code style="font-family: monospace; color: #60a5fa;">interference.jl</code>).
+          <code style="color:#60a5fa;">bifurcation.jl</code><br>
+          x&#x2099;&#x208A;&#x2081; = r&#xB7;x&#x2099;&#xB7;(1&#x2212;x&#x2099;) + &#x3B5; &nbsp;&nbsp; H = &#x2212;&#x2211;p&#xB7;ln p
           <br><br>
-          During the gallery installation, the audio was played using a custom directional parametric speaker array built from an eBay kit of <a href="https://www.ebay.com/itm/197128425281?chn=ps&norover=1&mkevt=1&mkrid=711-117182-37290-0&mkcid=2&mkscid=101&itemid=197128425281&targetid=2450249296795&device=c&mktype=pla&googleloc=9061293&poi=&campaignid=23869651121&mkgroupid=196062826785&rlsatarget=pla-2450249296795&abcId=9407526&merchantid=6296724&gad_source=1&gad_campaignid=23869651121&gbraid=0AAAAAD_QDh82WtSvaJL8AuqEgt5Ggb6-S&gclid=CjwKCAjw857RBhAgEiwAI-1yKGujKhURpWUM6BzZEfuGE0TB7PW6gXREzSeK8Vbb7Luvoz5wOccMkxoC0mQQAvD_BwE" target="_blank" style="color: #60a5fa; text-decoration: underline;">48 pieces of 10mm ultrasonic transducers</a>. The air demodulates the ultrasound, forming a physical spotlight of audible sound.
+          <code style="color:#60a5fa;">flayer.jl</code><br>
+          f = f&#x2080;&#xB7;2&#x1D52;&#xB7;r&#x1D62; &nbsp;&nbsp; v += sin(&#x3C6;&#x1D62;)&#xB7;p &nbsp;&nbsp; &#x3C6;&#x1D62; += 2&#x3C0;&#xB7;f&#x1D62;&#xB7;dt
           <br><br>
-          <strong style="color: #fff;">Usage:</strong> To run the real-time synthesis engine:
-          <br>
-          <code style="font-family: monospace; color: #888;">cd JuliaAudio</code>
+          <code style="color:#60a5fa;">dissonance.jl</code><br>
+          d = |x&#x2033;| / (1+|x&#x2032;|) &nbsp;&nbsp; H = &#x2211;|x[i/k]|/k
+          <br><br>
+          <code style="color:#60a5fa;">interference.jl</code><br>
+          v = (1+0.5&#xB7;sin(2&#x3C0;&#x3BC;))&#xB7;b&#xB7;sin(&#x3C6;+&#x3C0;&#x3BC;/4) &nbsp; &#x2192; soft clip at &#xB10.8
+          <br><br>
+          Speaker: <a href="https://www.ebay.com/itm/197128425281" target="_blank" style="color: #60a5fa; text-decoration: underline;">48&#xD7; 10mm ultrasonic transducer array</a>.
           <br>
           <code style="font-family: monospace; color: #888;">julia orchestrator.jl > output_stream.raw</code>
         </p>

@@ -586,8 +586,7 @@ body.audio-playing .soundwave-bar {
 
 .timeline-item.final-video-item.active .timeline-media video {
   filter: blur(0px) brightness(1.0); /* Full clean brightness */
-  transform: scale(1);
-  animation: colorShiftSlow 14s infinite ease-in-out;
+  animation: colorShiftSlow 14s infinite ease-in-out, videoZoom 36s infinite ease-in-out;
 }
 
 /* Living color shift: slow saturation & hue modulation */
@@ -595,6 +594,14 @@ body.audio-playing .soundwave-bar {
   0% { filter: saturate(1.0) hue-rotate(0deg) brightness(1.0); }
   50% { filter: saturate(1.35) hue-rotate(12deg) brightness(1.05); }
   100% { filter: saturate(1.0) hue-rotate(0deg) brightness(1.0); }
+}
+
+/* Slow cinematic zoom out and back in */
+@keyframes videoZoom {
+  0%   { transform: scale(1.0); }
+  40%  { transform: scale(0.62); }
+  60%  { transform: scale(0.62); }
+  100% { transform: scale(1.0); }
 }
 
 /* ---------------------------------------------------- */

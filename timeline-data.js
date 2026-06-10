@@ -266,7 +266,7 @@ const timelineData = [
   {
     "id": 23,
     "slide": 23,
-    "images": ["assets/slides/slide_24a.jpg", "assets/slides/slide_24b.jpg"],
+    "images": ["assets/slides/slide_24a.jpg"],
     "title": "Dry Calibration & Software Lock",
     "date": "Day 92",
     "description": "",

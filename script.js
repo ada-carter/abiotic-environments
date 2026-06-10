@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Assign dynamic full-screen and orientation classes
       let classes = `timeline-item`;
-      if (item.slide === 1 || item.slide === 24 || item.slide === 25) {
+      if (item.slide === 1 || item.slide === 23 || item.slide === 24 || item.slide === 25) {
         classes += ' fullscreen-slide';
       }
       if (verticalSlides.includes(item.slide)) {
