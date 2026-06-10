@@ -32,13 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
     return {
       x: Math.random() * canvas.width,
       y: spawnAtBottom ? canvas.height + 20 : Math.random() * canvas.height,
-      size: isRed ? Math.random() * 1.8 + 0.8 : Math.random() * 2.5 + 1.2,
+      size: isRed
+        ? Math.random() * 1.6 + 0.5           // red embers: 0.5–2.1px
+        : Math.random() * 4.0 + 0.5,          // blue/cyan: 0.5–4.5px (wider range)
       speedX: Math.random() * 0.6 - 0.3,
       speedY: -(Math.random() * 0.6 + 0.2),
       baseAlpha: Math.random() * 0.6 + 0.3,
       alphaPhase: Math.random() * Math.PI * 2,
       pulseSpeed: Math.random() * 0.04 + 0.01,
-      isRed // flag for color
+      colorBias: Math.random(),               // 0 = pure blue, 1 = pure cyan
+      colorPhase: Math.random() * Math.PI * 2, // drifts independently for each particle
+      isRed
     };
   }
 
@@ -76,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       p.x += p.speedX + Math.sin(p.alphaPhase) * swayAmplitude * 0.4;
       p.y += p.speedY * (1.0 + scrollPercent * 0.9);
       p.alphaPhase += p.pulseSpeed * (1.0 + scrollPercent * 1.5);
+      p.colorPhase += 0.006; // slow independent color drift
 
       // Spiral curling motion at the very bottom (Slide 24+ / Scroll > 0.75)
       if (scrollPercent > 0.75) {
@@ -95,20 +100,31 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Calculate glowing flash brightness (sinusoidal pulse)
-      const currentAlpha = p.baseAlpha * (0.2 + 0.8 * Math.abs(Math.sin(p.alphaPhase)));
+      const rawAlpha = p.baseAlpha * (0.2 + 0.8 * Math.abs(Math.sin(p.alphaPhase)));
+
+      // Center-screen fade: particles near the vertical midpoint are dimmer
+      const centerY = canvas.height / 2;
+      const distFromCenter = Math.abs(p.y - centerY) / centerY; // 0 at center, 1 at edges
+      const centerFade = 0.15 + 0.85 * Math.min(1, distFromCenter * 1.4);
+      const currentAlpha = rawAlpha * centerFade;
 
       // Red particles are only visible in deep scroll (> 65%) and flash subtly
       if (p.isRed) {
-        const redVisibility = Math.max(0, (scrollPercent - 0.65) / 0.35); // 0→1 from 65%→100% scroll
+        const redVisibility = Math.max(0, (scrollPercent - 0.65) / 0.35);
         const redAlpha = currentAlpha * redVisibility * 0.75;
-        if (redAlpha < 0.02) continue; // skip invisible red particles
+        if (redAlpha < 0.02) continue;
         ctx.shadowBlur = p.size * 5;
         ctx.shadowColor = `rgba(200, 0, 0, ${redAlpha})`;
         ctx.fillStyle = `rgba(220, 20, 20, ${redAlpha})`;
       } else {
+        // Cyan↔blue shift: colorBias sets base lean, colorPhase makes it drift slowly
+        const cShift = (p.colorBias + 0.5 * Math.sin(p.colorPhase)) * 0.5 + 0.25; // 0–1 clamped range
+        const g = Math.floor(cShift * 180);        // 0 (blue) to 180 (cyan-ish)
+        const r = 0;
+        const b = 255;
         ctx.shadowBlur = p.size * 3.5;
-        ctx.shadowColor = 'rgba(0, 85, 255, 0.8)';
-        ctx.fillStyle = `rgba(0, 68, 255, ${currentAlpha})`;
+        ctx.shadowColor = `rgba(${r}, ${Math.floor(85 + cShift * 120)}, 255, 0.75)`;
+        ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${currentAlpha})`;
       }
 
       ctx.beginPath();

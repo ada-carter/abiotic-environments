@@ -4,7 +4,6 @@ output_audio.wav
 
 # Root-level recordings / scratch files
 20260609_125608.mp4
-*.mp4
 
 # Windows & OS artifacts
 desktop.ini

@@ -2,9 +2,7 @@ const timelineData = [
   {
     "id": 1,
     "slide": 1,
-    "images": [
-      "assets/slides/slide_01.jpg"
-    ],
+    "images": ["assets/slides/slide_01.jpg"],
     "title": "Project Initialization",
     "date": "Day 01",
     "description": "",
@@ -16,9 +14,7 @@ const timelineData = [
   {
     "id": 2,
     "slide": 2,
-    "images": [
-      "assets/slides/slide_03.jpg"
-    ],
+    "images": ["assets/slides/slide_03.jpg"],
     "title": "Site Survey & Dimensions",
     "date": "Day 08",
     "description": "",
@@ -30,9 +26,7 @@ const timelineData = [
   {
     "id": 3,
     "slide": 3,
-    "images": [
-      "assets/slides/slide_04.jpg"
-    ],
+    "images": ["assets/slides/slide_04.jpg"],
     "title": "Structural Schematics",
     "date": "Day 12",
     "description": "",
@@ -44,9 +38,7 @@ const timelineData = [
   {
     "id": 4,
     "slide": 4,
-    "images": [
-      "assets/slides/slide_05.jpg"
-    ],
+    "images": ["assets/slides/slide_05.jpg"],
     "title": "Material Sourcing: Substrates",
     "date": "Day 15",
     "description": "",
@@ -58,9 +50,7 @@ const timelineData = [
   {
     "id": 5,
     "slide": 5,
-    "images": [
-      "assets/slides/slide_06.jpg"
-    ],
+    "images": ["assets/slides/slide_06.jpg"],
     "title": "Material Sourcing: Electronics",
     "date": "Day 18",
     "description": "",
@@ -72,9 +62,7 @@ const timelineData = [
   {
     "id": 6,
     "slide": 6,
-    "images": [
-      "assets/slides/slide_07.jpg"
-    ],
+    "images": ["assets/slides/slide_07.jpg"],
     "title": "Prototyping Sensor Networks",
     "date": "Day 22",
     "description": "",
@@ -86,9 +74,7 @@ const timelineData = [
   {
     "id": 7,
     "slide": 7,
-    "images": [
-      "assets/slides/slide_08.jpg"
-    ],
+    "images": ["assets/slides/slide_08.jpg"],
     "title": "Audio Synthesis Design",
     "date": "Day 25",
     "description": "",
@@ -100,9 +86,7 @@ const timelineData = [
   {
     "id": 8,
     "slide": 8,
-    "images": [
-      "assets/slides/slide_09.jpg"
-    ],
+    "images": ["assets/slides/slide_09.jpg"],
     "title": "Fabrication Phase: Enclosures",
     "date": "Day 30",
     "description": "",
@@ -114,23 +98,19 @@ const timelineData = [
   {
     "id": 9,
     "slide": 9,
-    "images": [
-      "assets/slides/slide_10.jpg"
-    ],
+    "images": ["assets/slides/slide_10.jpg"],
     "title": "Plumbing and Flow Controls",
     "date": "Day 35",
     "description": "",
     "bgColor": "rgb(38, 18, 1)",
     "textColor": "rgb(242, 202, 169)",
     "corner": "top-right",
-    "phase": "Crystal Gardening"
+    "phase": "Sculpting"
   },
   {
     "id": 10,
     "slide": 10,
-    "images": [
-      "assets/slides/slide_11.jpg"
-    ],
+    "images": ["assets/slides/slide_11.jpg"],
     "title": "Integration Testing: Electronics & Frame",
     "date": "Day 40",
     "description": "",
@@ -142,9 +122,7 @@ const timelineData = [
   {
     "id": 11,
     "slide": 11,
-    "images": [
-      "assets/slides/slide_12.jpg"
-    ],
+    "images": ["assets/slides/slide_12.jpg"],
     "title": "Calibrating Ambient Light Projections",
     "date": "Day 45",
     "description": "",
@@ -156,9 +134,7 @@ const timelineData = [
   {
     "id": 12,
     "slide": 12,
-    "images": [
-      "assets/slides/slide_13.jpg"
-    ],
+    "images": ["assets/slides/slide_13.jpg"],
     "title": "First Live Power-On Sequence",
     "date": "Day 50",
     "description": "",
@@ -170,9 +146,7 @@ const timelineData = [
   {
     "id": 13,
     "slide": 13,
-    "images": [
-      "assets/slides/slide_14.jpg"
-    ],
+    "images": ["assets/slides/slide_14.jpg"],
     "title": "Software Control Interface",
     "date": "Day 55",
     "description": "",
@@ -184,9 +158,7 @@ const timelineData = [
   {
     "id": 14,
     "slide": 14,
-    "images": [
-      "assets/slides/slide_15.jpg"
-    ],
+    "images": ["assets/slides/slide_15.jpg"],
     "title": "Acoustic Feedback Tuning",
     "date": "Day 60",
     "description": "",
@@ -198,9 +170,7 @@ const timelineData = [
   {
     "id": 15,
     "slide": 15,
-    "images": [
-      "assets/slides/slide_16.jpg"
-    ],
+    "images": ["assets/slides/slide_16.jpg"],
     "title": "Substrate Layering",
     "date": "Day 65",
     "description": "",
@@ -212,9 +182,7 @@ const timelineData = [
   {
     "id": 16,
     "slide": 16,
-    "images": [
-      "assets/slides/slide_17.jpg"
-    ],
+    "images": ["assets/slides/slide_17.jpg"],
     "title": "Testing Chemical Interactions",
     "date": "Day 70",
     "description": "",
@@ -226,9 +194,7 @@ const timelineData = [
   {
     "id": 17,
     "slide": 17,
-    "images": [
-      "assets/slides/slide_18.jpg"
-    ],
+    "images": ["assets/slides/slide_18.jpg"],
     "title": "Thermal Mapping Validation",
     "date": "Day 74",
     "description": "",
@@ -240,9 +206,7 @@ const timelineData = [
   {
     "id": 18,
     "slide": 18,
-    "images": [
-      "assets/slides/slide_19.jpg"
-    ],
+    "images": ["assets/slides/slide_19.jpg"],
     "title": "Atmospheric Seal Testing",
     "date": "Day 78",
     "description": "",
@@ -254,9 +218,7 @@ const timelineData = [
   {
     "id": 19,
     "slide": 19,
-    "images": [
-      "assets/slides/slide_20.jpg"
-    ],
+    "images": ["assets/slides/slide_20.jpg"],
     "title": "Pre-Installation Checklists",
     "date": "Day 82",
     "description": "",
@@ -268,9 +230,7 @@ const timelineData = [
   {
     "id": 20,
     "slide": 20,
-    "images": [
-      "assets/slides/slide_21.jpg"
-    ],
+    "images": ["assets/slides/slide_21.jpg"],
     "title": "Gallery Transport",
     "date": "Day 85",
     "description": "",
@@ -282,23 +242,19 @@ const timelineData = [
   {
     "id": 21,
     "slide": 21,
-    "images": [
-      "assets/slides/slide_22.jpg"
-    ],
+    "images": ["assets/slides/slide_22.jpg"],
     "title": "On-Site Assembly",
     "date": "Day 88",
     "description": "",
     "bgColor": "rgb(38, 38, 1)",
     "textColor": "rgb(242, 242, 169)",
     "corner": "top-right",
-    "phase": "Sculpting"
+    "phase": "Gallery"
   },
   {
     "id": 22,
     "slide": 22,
-    "images": [
-      "assets/slides/slide_23.jpg"
-    ],
+    "images": ["assets/slides/slide_23.jpg"],
     "title": "Final Wiring & Cable Management",
     "date": "Day 90",
     "description": "",
@@ -310,10 +266,7 @@ const timelineData = [
   {
     "id": 23,
     "slide": 23,
-    "images": [
-      "assets/slides/slide_24a.jpg",
-      "assets/slides/slide_24b.jpg"
-    ],
+    "images": ["assets/slides/slide_24a.jpg", "assets/slides/slide_24b.jpg"],
     "title": "Dry Calibration & Software Lock",
     "date": "Day 92",
     "description": "",
@@ -325,9 +278,7 @@ const timelineData = [
   {
     "id": 24,
     "slide": 24,
-    "images": [
-      "assets/slides/slide_25.jpg"
-    ],
+    "images": ["assets/slides/slide_25.jpg"],
     "title": "Official Power-up & Soundcheck",
     "date": "Day 94",
     "description": "",
@@ -339,9 +290,7 @@ const timelineData = [
   {
     "id": 25,
     "slide": 25,
-    "images": [
-      "assets/slides/slide_26.jpg"
-    ],
+    "images": ["assets/slides/slide_26.jpg"],
     "title": "Exhibition Opening",
     "date": "Day 95",
     "description": "",
